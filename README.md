@@ -87,7 +87,7 @@ Note: Linking and Pod install not needed.
 
 # Examples
 
-You can find a working example of this over the [related example repository](https://github.com/shubhambathe1/react-native-responsive-screen-hooks/tree/master/examples/responsive-screen/README.md)
+You can find a working example of this over the [related example repository] soon ;-)
 
 # License
 
