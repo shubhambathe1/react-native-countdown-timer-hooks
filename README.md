@@ -20,41 +20,51 @@ It also supports a callback function which you can utilize to let the use know w
 // packages
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import {
-  widthPercentageToDP,
-  heightPercentageToDP,
-  listenOrientationChange as lor,
-  removeOrientationListener as rol,
-} from 'react-native-responsive-screen-hooks';
+import CountDownTimer from 'react-native-countdown-timer';
 
 function App() {
+  // Timer References
+  const refTimer = useRef();
 
-  // TODO: Add a useState for monitoring the orientation of screen
-  const [orientation, setOrientation] = React.useState('portrait');
+  // For keeping a track on the Timer
+  const [timerEnd, setTimerEnd] = useState(false);
+
+  const timerCallbackFunc = (timerFlag) => {
+    // Setting timer flag to finished
+    setTimerEnd(timerFlag);
+    console.warn('You can alert the user by letting him know that Timer is out.');
+  };
 
   return (
-    <View style={{styles.container}}>
+    <View style={styles.container}>
       <View style={{ display: timerEnd ? 'none' : 'flex' }}>
-        
         <CountDownTimer
           ref={refTimer}
           timestamp={120}
           timerCallback={timerCallbackFunc}
-          containerStyle={styles.countdownTimerContainer}
-          textStyle={styles.countdownTimerText}
+          containerStyle={{
+            height: 56,
+            width: 120,
+            backgroundColor: '#FFFFFF',
+          }}
+          textStyle={{
+            fontSize: 15,
+            color: 'gray,
+            fontWeight: '500',
+            letterSpacing: 0.25,
+          }}
         />
-        
-        </View>
-          <TouchableOpacity
-            style={{ display: timerEnd ? 'flex' : 'none' }}
-            onPress={() => {
-              setTimerEnd(false);
-              refTimer.current.resetTimer();
-            }}
-          >
-            <Text style={styles.resendLabel}>{appStrings.LABEL_RESEND}</Text>
-          </TouchableOpacity>
-        </View>
+      </View>
+      <TouchableOpacity
+        style={{ display: timerEnd ? 'flex' : 'none' }}
+        onPress={() => {
+          setTimerEnd(false);
+          refTimer.current.resetTimer();
+        }}
+      >
+        <Text style={styles.resendLabel}>{appStrings.LABEL_RESEND}</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
@@ -78,11 +88,6 @@ Note: Linking and Pod install not needed.
 # Examples
 
 You can find a working example of this over the [related example repository](https://github.com/shubhambathe1/react-native-responsive-screen-hooks/tree/master/examples/responsive-screen/README.md)
-
-### Smartphones
-<img src="https://cdn-images-1.medium.com/max/800/1*aoIGDVNrcvIw_4NRqRtHTA.png" />
-<img src="https://cdn-images-1.medium.com/max/800/1*Yl9k-Lxg9jxJ9g00qmRlIA.png" />
-<img src="https://cdn-images-1.medium.com/max/800/1*rE43O18nt4_ECUvXr_fSZA.png" />
 
 # License
 
