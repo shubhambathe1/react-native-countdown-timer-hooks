@@ -1,6 +1,6 @@
 {
   "name": "react-native-countdown-timer-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Countdown Timer Package for React Native Projects.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shubhambathe1/react-native-countdown-timer.git"
+    "url": "git+https://github.com/shubhambathe1/react-native-countdown-timer-hooks.git"
   },
   "keywords": [
     "react",
@@ -22,7 +22,7 @@
   "author": "Shubham Bathe <shubhambathe1@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shubhambathe1/react-native-countdown-timer/issues"
+    "url": "https://github.com/shubhambathe1/react-native-countdown-timer-hooks/issues"
   },
-  "homepage": "https://github.com/shubhambathe1/react-native-countdown-timer#readme"
+  "homepage": "https://github.com/shubhambathe1/react-native-countdown-timer-hooks#readme"
 }
