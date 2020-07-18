@@ -16,9 +16,14 @@ component which is created using a custom hook. All you have to do is pass a tim
 
 It also supports a callback function which you can utilize to let the use know when the timer is over. You can also give a option to user to reset the timer using this function <i>refTimer.current.resetTimer()</i>.
 
-<img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot1.png" width="200" height="400" />
-
-<img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot2.png" width="200" height="400" />
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot1.png" width="300" height="550" alt="screenshot1.png" />
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot2.png" width="300" height="550" alt="screenshot2.png" />
+  </div>
+</div>
 
 ```javascript
 // packages
