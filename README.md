@@ -17,7 +17,7 @@ component which is created using a custom hook. All you have to do is pass a tim
 It also supports a callback function which you can utilize to let the use know when the timer is over. You can also give a option to user to reset the timer using this function <i>refTimer.current.resetTimer()</i>.
 
 <b>NOTE :</b> The pin code input is not part of this library. You can install it from this package:-
-(https://www.npmjs.com/package/react-native-pin-code)
+[PIN CODE INPUT](#https://www.npmjs.com/package/react-native-pin-code)
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer-hooks/master/screenshots/screenshot1.png" width="280" height="600" alt="screenshot1.png" hspace="50" />
