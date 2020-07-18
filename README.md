@@ -1,17 +1,17 @@
 # Contents
-* [The package](#react-native-countdown-timer)
+* [The package](#react-native-countdown-timer-hooks)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Examples](#examples)
 * [License](#license)
 * [Pull Requests](#pull)
 
-# react-native-countdown-timer
+# react-native-countdown-timer-hooks
 
-[![npm version](https://badge.fury.io/js/react-native-countdown-timer.svg)](https://www.npmjs.com/package/react-native-countdown-timer)
-[![npm](https://img.shields.io/npm/dm/react-native-countdown-timer.svg)]()
+[![npm version](https://badge.fury.io/js/react-native-countdown-timer-hooks.svg)](https://www.npmjs.com/package/react-native-countdown-timer-hooks)
+[![npm](https://img.shields.io/npm/dm/react-native-countdown-timer-hooks.svg)]()
 
-<i>react-native-countdown-timer</i> is a small library that provides a custom countdown timer 
+<i>react-native-countdown-timer-hooks</i> is a small library that provides a custom countdown timer 
 component which is created using a custom hook. All you have to do is pass a timestamp(as total number of seconds) to it and it will calculate the total number of days, hours, minutes and seconds automatically.
 
 It also supports a callback function which you can utilize to let the use know when the timer is over. You can also give a option to user to reset the timer using this function <i>refTimer.current.resetTimer()</i>.
@@ -28,7 +28,7 @@ It also supports a callback function which you can utilize to let the use know w
 // packages
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import CountDownTimer from 'react-native-countdown-timer';
+import CountDownTimer from 'react-native-countdown-timer-hooks';
 
 function App() {
   // Timer References
@@ -57,7 +57,7 @@ function App() {
           }}
           textStyle={{
             fontSize: 15,
-            color: 'gray,
+            color: 'gray',
             fontWeight: '500',
             letterSpacing: 0.25,
           }}
@@ -81,11 +81,11 @@ export default App;
 
 # Installation
 
-`npm i react-native-countdown-timer`
+`npm i react-native-countdown-timer-hooks`
 
 OR
 
-`yarn add react-native-countdown-timer`
+`yarn add react-native-countdown-timer-hooks`
 
 Note: Linking and Pod install not needed.
 
