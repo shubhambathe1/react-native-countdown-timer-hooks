@@ -85,6 +85,15 @@ Note: Linking and Pod install not needed.
 
 # Updates 🚀
 
+### Props
+
+| Name             | Type       | Default                                      | Description                                                                                                                                                                                       |
+| ---------------- | ---------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timestamp        | `number`   | required                                     | Total number of seconds to be passed to the timer component. Example:- passing {60} seconds will give timestamp of 01:00 minutes to the timer                                                             |
+| timerCallback    | `function` | `void`                                       | Called when the Timer countdown ends. This is a function where you can alert the user that the timer has ended.                            |                                                                                                                                             
+| containerStyle   | `style`    | { backgroundColor: 'rgba(0, 0, 0, .2)' }     | Style of Timer Component Container dots                                                                                                                                                                 |
+| textStyle        | `style`    | { fontSize: 15, fontWeight: '600', color: 'rgba(0, 0, 0, .2)' }  | Style of Timer Component Text dots                                                                                                                                                                 |
+
 # Examples
 
 You can find a working example of this over the [related example repository] soon ;-)
