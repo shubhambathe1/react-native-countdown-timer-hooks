@@ -16,6 +16,8 @@ component which is created using a custom hook. All you have to do is pass a tim
 
 It also supports a callback function which you can utilize to let the use know when the timer is over. You can also give a option to user to reset the timer using this function <i>refTimer.current.resetTimer()</i>.
 
+<img src="https://cdn-images-1.medium.com/max/800/1*BWpx3uRPlWByahoXA6M-BQ.jpeg" />
+
 ```javascript
 // packages
 import React, { useEffect } from 'react';
