@@ -20,8 +20,8 @@ It also supports a callback function which you can utilize to let the use know w
 (https://www.npmjs.com/package/react-native-pin-code)
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot1.png" width="280" height="600" alt="screenshot1.png" hspace="50" />
-  <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer/development/screenshots/screenshot2.png" width="280" height="600" alt="screenshot2.png" hspace="50" /> 
+  <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer-hooks/master/screenshots/screenshot1.png" width="280" height="600" alt="screenshot1.png" hspace="50" />
+  <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer-hooks/master/screenshots/screenshot2.png" width="280" height="600" alt="screenshot2.png" hspace="50" /> 
 </p>
 
 ```javascript
