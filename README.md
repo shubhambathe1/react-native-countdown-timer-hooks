@@ -17,7 +17,7 @@ component which is created using a custom hook. All you have to do is pass a tim
 It also supports a callback function which you can utilize to let the use know when the timer is over. You can also give a option to user to reset the timer using this function <i>refTimer.current.resetTimer()</i>.
 
 <b>NOTE :</b> The pin code input is not part of this library. You can install it from this package:-
-(#https://www.npmjs.com/package/react-native-pin-code)
+[react-native-pin-code](https://www.npmjs.com/package/react-native-pin-code)
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/shubhambathe1/react-native-countdown-timer-hooks/master/screenshots/screenshot1.png" width="280" height="600" alt="screenshot1.png" hspace="50" />
@@ -25,12 +25,16 @@ It also supports a callback function which you can utilize to let the use know w
 </p>
 
 ```javascript
+/**
+ * CountDown Timer Component
+ */
+
 // packages
-import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
 import CountDownTimer from 'react-native-countdown-timer-hooks';
 
-function App() {
+function CounterApp() {
   // Timer References
   const refTimer = useRef();
 
@@ -40,11 +44,18 @@ function App() {
   const timerCallbackFunc = (timerFlag) => {
     // Setting timer flag to finished
     setTimerEnd(timerFlag);
-    console.warn('You can alert the user by letting him know that Timer is out.');
+    console.warn(
+      'You can alert the user by letting him know that Timer is out.',
+    );
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <View style={{ display: timerEnd ? 'none' : 'flex' }}>
         <CountDownTimer
           ref={refTimer}
@@ -53,30 +64,43 @@ function App() {
           containerStyle={{
             height: 56,
             width: 120,
-            backgroundColor: '#FFFFFF',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 35,
+            backgroundColor: '#2196f3',
           }}
           textStyle={{
-            fontSize: 15,
-            color: 'gray',
+            fontSize: 25,
+            color: '#FFFFFF',
             fontWeight: '500',
             letterSpacing: 0.25,
           }}
         />
       </View>
       <TouchableOpacity
-        style={{ display: timerEnd ? 'flex' : 'none' }}
+        style={{
+          display: timerEnd ? 'flex' : 'none',
+          height: 56,
+          width: 120,
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: 35,
+          backgroundColor: '#512da8',
+        }}
         onPress={() => {
           setTimerEnd(false);
           refTimer.current.resetTimer();
-        }}
-      >
-        <Text style={styles.resendLabel}>{appStrings.LABEL_RESEND}</Text>
+        }}>
+        <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>
+          Resend
+        </Text>
       </TouchableOpacity>
     </View>
   );
 }
 
-export default App;
+export default CounterApp;
+
 ```
 
 # Installation
@@ -93,6 +117,8 @@ Note: Linking and Pod install not needed.
 
 # Updates 🚀
 
+Added demo project for more details on usage. Checkout the [Examples](#examples) sections.
+
 ### Props
 
 | Name             | Type       | Default                                      | Description                                                                                                                                                                                       |
@@ -104,7 +130,7 @@ Note: Linking and Pod install not needed.
 
 # Examples
 
-You can find a working example of this over the [related example repository] soon ;-)
+You can find a working example of this over the [related example repository](https://github.com/shubhambathe1/CountDownTimerDemo)
 
 # License
 
@@ -112,4 +138,4 @@ MIT
 
 # Pull
 
-Pull requests are welcome! Please make the PR to `development` branch though and not `master`. Thanks.
+Pull requests are welcome! Please make the PR to `dev` branch though and not `master`. Thanks.
