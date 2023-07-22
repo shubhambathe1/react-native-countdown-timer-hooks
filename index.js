@@ -30,7 +30,7 @@ const CountDownTimer = forwardRef((props, ref) => {
       if (props.timerCallback) {
         props.timerCallback(true);
       } else {
-        console.log('Please pass a callback function...');
+        console.log('Pass a callback function that will trigger after timer runs out.');
       }
       setSendOnce(false);
     }
@@ -72,11 +72,11 @@ const CountDownTimer = forwardRef((props, ref) => {
       displayTime = `${hr}:${min}:${sec}`;
     }
 
-    if (hours === 0 && minutes !== 0) {
+    if (days === 0 && hours === 0 && minutes !== 0) {
       displayTime = `${min}:${sec}`;
     }
 
-    if (minutes === 0 && seconds !== 0) {
+    if (days === 0 && hours === 0 && minutes === 0 && seconds !== 0) {
       displayTime = `${min}:${sec}`;
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-native-countdown-timer-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Countdown Timer Package for React Native Projects.",
   "main": "index.js",
   "scripts": {
