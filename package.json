@@ -1,7 +1,7 @@
 {
   "name": "react-native-countdown-timer-hooks",
-  "version": "1.0.3",
-  "description": "A Countdown Timer Package for React Native Projects.",
+  "version": "1.0.5",
+  "description": "Countdown Timer Functional Component Package for React Native Projects.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,13 @@
     "url": "git+https://github.com/shubhambathe1/react-native-countdown-timer-hooks.git"
   },
   "keywords": [
+    "react-native",
+    "react-component",
     "react",
     "native",
+    "mobile",
+    "ios",
+    "android",
     "countdown",
     "timer",
     "stopwatch",
