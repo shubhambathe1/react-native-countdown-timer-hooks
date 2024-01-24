@@ -2,12 +2,20 @@
  * CountDownTimer Component
  */
 
-import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
-import { Text, View } from 'react-native';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
+import { Text, View } from "react-native";
 
 const CountDownTimer = forwardRef((props, ref) => {
   // For Total seconds
-  const [timeStamp, setTimeStamp] = useState(props.timestamp ? props.timestamp : 0);
+  const [timeStamp, setTimeStamp] = useState(
+    props.timestamp ? props.timestamp : 0
+  );
   // Delay Required
   const [delay, setDelay] = useState(props.delay ? props.delay : 1000);
 
@@ -21,16 +29,21 @@ const CountDownTimer = forwardRef((props, ref) => {
   const [sendOnce, setSendOnce] = useState(true);
 
   // Flag for final display time format
-  const [finalDisplayTime, setFinalDisplayTime] = useState('');
+  const [finalDisplayTime, setFinalDisplayTime] = useState("");
 
   useInterval(() => {
     if (timeStamp > 0) {
       setTimeStamp(timeStamp - 1);
+      if (props.timerOnProgress) {
+        props.timerOnProgress(timeStamp - 1);
+      }
     } else if (sendOnce) {
       if (props.timerCallback) {
         props.timerCallback(true);
       } else {
-        console.log('Pass a callback function that will trigger after timer runs out.');
+        console.log(
+          "Pass a callback function that will trigger once timer runs out...."
+        );
       }
       setSendOnce(false);
     }
@@ -62,7 +75,7 @@ const CountDownTimer = forwardRef((props, ref) => {
     const min = minutes < 10 ? `0${minutes}` : minutes;
     const sec = seconds < 10 ? `0${seconds}` : seconds;
 
-    let displayTime = '';
+    let displayTime = "";
 
     if (days !== 0) {
       displayTime = `${days}:${hr}:${min}:${sec}`;
